@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riya & Love</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #ffe6e6; margin: 0; padding: 0; }
+        header { background-color: #ff4d4d; padding: 20px; color: white; font-size: 24px; }
+        section { margin: 20px; padding: 20px; }
+        img { max-width: 300px; border-radius: 15px; }
+        .timer { font-size: 20px; font-weight: bold; color: #ff3333; }
+    </style>
+</head>
+<body>
+    <header>
+        ❤️ Riya, My Love ❤️
+    </header>
+    <section>
+        <h2>Our Journey Together</h2>
+        <p>Riya, you are the most precious part of my life. Our love has grown through ups and downs, and every moment with you has been magical. You bring light into my life, and I cherish you more than words can say. </p>
+        <h3>Our Memories</h3>
+        <img src="z.jpeg" alt="Me">
+        <img src="irene.jpg" alt="Riya">
+    </section>
+    <section>
+        <h2>Time Spent Together</h2>
+        <p>We have spent together in love and happiness for:</p>
+        <div class="timer" id="timer"></div>
+    </section>
+    <script>
+        function updateTimer() {
+            let startDate = new Date("2023-11-16T13:30:00"); // Adjust based on actual date
+            let now = new Date();
+            let diff = now - startDate;
+            let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            document.getElementById("timer").innerText = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+        }
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
+</body>
+</html>
